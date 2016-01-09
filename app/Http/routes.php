@@ -12,5 +12,9 @@
 */
 
 $app->get('/', function () use ($app) {
-    return $app->version();
+    return 'index';
 });
+
+$app->get('reports','ReportController@index');
+
+$app->post('create/reports','ReportController@store');
